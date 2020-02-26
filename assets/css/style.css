@@ -1,0 +1,139 @@
+.image-uploader {
+    height: 6rem;
+    min-height: 6rem;
+    padding: 0 10px;
+    z-index: 0;
+    margin: 10px 0;
+}
+
+#selectBtn {
+    z-index: 1;
+    position: absolute;
+    top: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button.btn {
+    border: 1px solid;
+}
+
+.uploaded {
+    padding: 10px 0;
+}
+
+.image-uploader.has-files .upload-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.uploaded .uploaded-image {
+    margin: 0;
+}
+
+.uploaded .uploaded-image:first-child {
+    border: 5px solid #5cb85c;
+}
+
+.uploaded .uploaded-image:first-child::before {
+    content: "Featured Image";
+    background-color: #5cb85c;
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    font-size: 1rem;
+    height: 1rem;
+}
+
+.uploaded .uploaded-image img {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.uploaded .uploaded-image .delete-image {
+    display: block;
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.edit_buttons {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 80vw;
+}
+
+.modal-body {
+    height: 50vw;
+    text-align: center;
+}
+
+#croppedImg {
+    height: 100%;
+    position: relative!important;
+}
+
+.cropper-container {
+    width: 100%!important;
+}
+
+@media only screen and (max-width: 780px) {
+    .image-uploader {
+        min-height: 8rem;
+        text-align: center;
+    }
+
+    .image-uploader .upload-text {
+        position: relative;
+        margin-top: 1rem;
+    }
+
+    .image-uploader.has-files .upload-text {
+        position: relative;
+    }
+
+    #selectBtn {
+        position: relative;
+    }
+
+    .uploaded .uploaded-image {
+        width: 50%;
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .uploaded {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .uploaded .uploaded-image {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #selectBtn {
+        top: unset;
+    }
+
+    /*.image-uploader .upload-text {
+        margin-top: 2.5rem;
+    }*/
+
+}

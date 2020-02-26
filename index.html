@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Image-Uploader</title>
+    <link rel="stylesheet" href="assets/css/image-uploader.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Montserrat:300,400,500,600,700|Source+Code+Pro&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cropper.min.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="input-field">
+            <div class="input-images-1" style="padding-top: .5rem;">
+                <div class="image-uploader">
+                    <input type="file" id="images-select" name="images[]" multiple="multiple">
+                    <div class="upload-text">
+                        <span>You can also drop image files here to upload them</span>
+                    </div>
+                    <button type="button" id="selectBtn" class="btn btn-outline-primary">Add Images</button>
+                </div>
+            </div>
+            <div class="uploaded" id="responsive-grid">
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn">Cancel Edit</button>
+            <button class="btn">Save</button>
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/cropper.min.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<script>
+    $(function () {
+        $( "#responsive-grid" ).sortable({
+            connectWith: ".card",
+            placeholder: "placeholder",
+            forcePlaceholderSize: true,
+            cursor: 'move'
+          });
+    });
+
+</script>
+
+</body>
+</html>
